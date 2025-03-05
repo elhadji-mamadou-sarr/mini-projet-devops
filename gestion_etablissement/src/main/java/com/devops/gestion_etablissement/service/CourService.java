@@ -52,6 +52,8 @@ public class CourService {
         Cours cour = coursRepository.findById(id).orElse(null);
         cour.setLibelle(cours.getLibelle());
         cour.setDescription(cours.getDescription());
+        cour.setClasseId(cours.getClasseId());
+
         coursRepository.save(cour);
         CoursResponse courR = mapCourResponse(cour);
 
