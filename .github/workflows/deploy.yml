@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/mini-projet-devops/gestion_etablissement
+            cd /home/mini-projet-devops
             git pull origin main
             docker compose down
             docker compose up -d --build
